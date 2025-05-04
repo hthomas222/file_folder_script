@@ -7,26 +7,26 @@ import shutil
 
 
 def file_saver():
-    old_location = console.input(f"[bold blue]Enter the location of where the file is currently located at: ")
-    New_location = console.input(f"[bold blue]Enter the location of where the file is wanted: ")
+    old_location = console.input("[bold blue]Enter the location of where the file is currently located at: ")
+    New_location = console.input("[bold blue]Enter the location of where the file is wanted: ")
     shutil.move(old_location, New_location)
 
 def folder_creation():
-    folder = console.input(f"[bold blue]Enter the location of where you want to create a folder: ")
-    name_of_folder = console.input(f"[bold blue]Enter the name of the folder you are wanting to create: ")
+    folder = console.input("[bold blue]Enter the location of where you want to create a folder: ")
+    name_of_folder = console.input("[bold blue]Enter the name of the folder you are wanting to create: ")
     os.chdir(folder)
     os.mkdir(name_of_folder)
 
 def file_creation():
-    folder = console.input(f"[bold blue]Enter the location of where you want to create a file: ")
-    name_of_file = console.input(f"[bold blue]Enter the name of file: ")
+    folder = console.input("[bold blue]Enter the location of where you want to create a file: ")
+    name_of_file = console.input("[bold blue]Enter the name of file: ")
     os.chdir(folder)
     with open(name_of_file) as file:
         file.read()
 
 def folder_mover():
-    old_location = console.input(f"[bold blue]Enter the location of where the file is currently located at: ")
-    New_location = console.input(f"[bold blue]Enter the location of where the file is wanted: ")
+    old_location = console.input("[bold blue]Enter the location of where the file is currently located at: ")
+    New_location = console.input("[bold blue]Enter the location of where the file is wanted: ")
     shutil.move(old_location, New_location)    
 
 
@@ -38,7 +38,7 @@ def check(test):
     sel = ["1", "2"]
     while test not in sel:
             console.log("Please enter either 1 or 2")
-            test = console.input(f"[bold red]Select 1 to exit |""[bold green]| Select 2 to continue: ")
+            test = console.input("[bold red]Select 1 to exit |""[bold green]| Select 2 to continue: ")
     return test
 
 
@@ -58,7 +58,7 @@ while test != "1":
     console = Console()
     console.print(table)
     print()
-    selection = console.input(f"[bold green]Enter a number to execute the command: ")
+    selection = console.input("[bold green]Enter a number to execute the command: ")
     if selection == "1":
         file_saver()
     elif selection == "2":
@@ -76,7 +76,7 @@ while test != "1":
     else:
         console.log("[bold red]Please enter a valid choice!")
     print()
-    test = console.input(f"[bold red]Select 1 to exit |""[bold green]| Select 2 to continue: ")
+    test = console.input("[bold red]Select 1 to exit |""[bold green]| Select 2 to continue: ")
     if test != "1":
         x = check(test)
         if x == "1":
